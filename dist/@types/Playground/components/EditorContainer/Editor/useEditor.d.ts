@@ -1,7 +1,7 @@
 import { Monaco } from '@monaco-editor/react';
 export declare const useEditor: () => {
     autoLoadExtraLib: (editor: any, monaco: any, defaultValue: string, onWatch: any) => Promise<{
-        acquireType: (code: string) => void;
+        acquireType: (code: string) => Promise<void>;
         addListener: <T extends "progress" | "receivedFile" | "errorMessage" | "started" | "finished">(event: T, handler: Required<{
             receivedFile?: Set<(code: string, path: string) => void> | undefined;
             progress?: Set<(downloaded: number, estimatedTotal: number) => void> | undefined;

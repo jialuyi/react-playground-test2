@@ -1,8 +1,8 @@
 {
-  "name": "react-exercise-playground",
-  "description": "react-exercise-playground是一个react在线代码编辑器可实时预览运行效果",
+  "name": "react-playground-test",
+  "description": "",
   "private": false,
-  "version": "0.1.93",
+  "version": "0.0.1",
   "exports": {
     ".": {
       "import": {
@@ -22,11 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fewismuch/react-playground.git"
-  },
-  "bugs": {
-    "url": "https://github.com/fewismuch/react-playground/issues",
-    "email": "779205344@qq.com"
+    "url": "https://github.com/jialuyi/react-playground-test2.git"
   },
   "keywords": [
     "react",
