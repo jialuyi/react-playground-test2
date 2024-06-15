@@ -2,7 +2,7 @@ import importMap from './template/import-map.json?raw'
 import AppCss from './template/src/App.css?raw'
 import App from './template/src/App.tsx?raw'
 import main from './template/src/main.tsx?raw'
-import { getFilesFromUrl, fileName2Language } from './utils'
+import { fileName2Language } from './utils'
 
 import type { IFiles } from './types'
 
@@ -13,7 +13,7 @@ export const IMPORT_MAP_FILE_NAME = 'import-map.json'
 // app入口文件名
 export const ENTRY_FILE_NAME = 'main.tsx'
 
-export const initFiles: IFiles = getFilesFromUrl() || {
+export const initFiles: IFiles = {
   [ENTRY_FILE_NAME]: {
     name: ENTRY_FILE_NAME,
     language: fileName2Language(ENTRY_FILE_NAME),

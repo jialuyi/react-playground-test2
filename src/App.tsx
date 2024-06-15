@@ -5,7 +5,8 @@ function App() {
   const handleFilesHash = (hash: string) => {
     window.location.hash = hash
   }
-
+  // @ts-ignore
+  window.Playground = PlaygroundSandbox
   return <PlaygroundSandbox onFilesChange={handleFilesHash} />
 }
 

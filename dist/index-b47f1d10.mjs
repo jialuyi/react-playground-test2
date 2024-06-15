@@ -14,8 +14,8 @@ function vr() {
   if (Te)
     return W;
   Te = 1;
-  var g = Ce, R = Symbol.for("react.element"), S = Symbol.for("react.fragment"), b = Object.prototype.hasOwnProperty, O = g.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, C = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function x(y, f, _) {
+  var g = Ce, R = Symbol.for("react.element"), S = Symbol.for("react.fragment"), b = Object.prototype.hasOwnProperty, x = g.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, C = { key: !0, ref: !0, __self: !0, __source: !0 };
+  function O(y, f, _) {
     var l, d = {}, w = null, T = null;
     _ !== void 0 && (w = "" + _), f.key !== void 0 && (w = "" + f.key), f.ref !== void 0 && (T = f.ref);
     for (l in f)
@@ -23,9 +23,9 @@ function vr() {
     if (y && y.defaultProps)
       for (l in f = y.defaultProps, f)
         d[l] === void 0 && (d[l] = f[l]);
-    return { $$typeof: R, type: y, key: w, ref: T, props: d, _owner: O.current };
+    return { $$typeof: R, type: y, key: w, ref: T, props: d, _owner: x.current };
   }
-  return W.Fragment = S, W.jsx = x, W.jsxs = x, W;
+  return W.Fragment = S, W.jsx = O, W.jsxs = O, W;
 }
 var M = {};
 /**
@@ -40,7 +40,7 @@ var M = {};
 var Pe;
 function gr() {
   return Pe || (Pe = 1, {}.NODE_ENV !== "production" && function() {
-    var g = Ce, R = Symbol.for("react.element"), S = Symbol.for("react.portal"), b = Symbol.for("react.fragment"), O = Symbol.for("react.strict_mode"), C = Symbol.for("react.profiler"), x = Symbol.for("react.provider"), y = Symbol.for("react.context"), f = Symbol.for("react.forward_ref"), _ = Symbol.for("react.suspense"), l = Symbol.for("react.suspense_list"), d = Symbol.for("react.memo"), w = Symbol.for("react.lazy"), T = Symbol.for("react.offscreen"), F = Symbol.iterator, U = "@@iterator";
+    var g = Ce, R = Symbol.for("react.element"), S = Symbol.for("react.portal"), b = Symbol.for("react.fragment"), x = Symbol.for("react.strict_mode"), C = Symbol.for("react.profiler"), O = Symbol.for("react.provider"), y = Symbol.for("react.context"), f = Symbol.for("react.forward_ref"), _ = Symbol.for("react.suspense"), l = Symbol.for("react.suspense_list"), d = Symbol.for("react.memo"), w = Symbol.for("react.lazy"), T = Symbol.for("react.offscreen"), F = Symbol.iterator, U = "@@iterator";
     function ke(e) {
       if (e === null || typeof e != "object")
         return null;
@@ -65,10 +65,10 @@ function gr() {
         s.unshift("Warning: " + r), Function.prototype.apply.call(console[e], console, s);
       }
     }
-    var Ae = !1, Fe = !1, Ie = !1, Le = !1, Ne = !1, ne;
+    var Ae = !1, Fe = !1, Ie = !1, Ne = !1, Le = !1, ne;
     ne = Symbol.for("react.module.reference");
     function We(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === b || e === C || Ne || e === O || e === _ || e === l || Le || e === T || Ae || Fe || Ie || typeof e == "object" && e !== null && (e.$$typeof === w || e.$$typeof === d || e.$$typeof === x || e.$$typeof === y || e.$$typeof === f || // This needs to include all possible module reference object
+      return !!(typeof e == "string" || typeof e == "function" || e === b || e === C || Le || e === x || e === _ || e === l || Ne || e === T || Ae || Fe || Ie || typeof e == "object" && e !== null && (e.$$typeof === w || e.$$typeof === d || e.$$typeof === O || e.$$typeof === y || e.$$typeof === f || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -98,7 +98,7 @@ function gr() {
           return "Portal";
         case C:
           return "Profiler";
-        case O:
+        case x:
           return "StrictMode";
         case _:
           return "Suspense";
@@ -110,7 +110,7 @@ function gr() {
           case y:
             var r = e;
             return ae(r) + ".Consumer";
-          case x:
+          case O:
             var t = e;
             return ae(t._context) + ".Provider";
           case f:
@@ -317,7 +317,7 @@ function gr() {
         }
       return "";
     }
-    var L = Object.prototype.hasOwnProperty, ve = {}, ge = k.ReactDebugCurrentFrame;
+    var N = Object.prototype.hasOwnProperty, ve = {}, ge = k.ReactDebugCurrentFrame;
     function B(e) {
       if (e) {
         var r = e._owner, t = V(e.type, e._source, r ? r.type : null);
@@ -327,7 +327,7 @@ function gr() {
     }
     function Xe(e, r, t, n, o) {
       {
-        var s = Function.call.bind(L);
+        var s = Function.call.bind(N);
         for (var i in e)
           if (s(e, i)) {
             var a = void 0;
@@ -368,7 +368,7 @@ function gr() {
       if (Ke(e))
         return p("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", Ge(e)), me(e);
     }
-    var N = k.ReactCurrentOwner, qe = {
+    var L = k.ReactCurrentOwner, qe = {
       key: !0,
       ref: !0,
       __self: !0,
@@ -376,7 +376,7 @@ function gr() {
     }, he, be, q;
     q = {};
     function ze(e) {
-      if (L.call(e, "ref")) {
+      if (N.call(e, "ref")) {
         var r = Object.getOwnPropertyDescriptor(e, "ref").get;
         if (r && r.isReactWarning)
           return !1;
@@ -384,7 +384,7 @@ function gr() {
       return e.ref !== void 0;
     }
     function He(e) {
-      if (L.call(e, "key")) {
+      if (N.call(e, "key")) {
         var r = Object.getOwnPropertyDescriptor(e, "key").get;
         if (r && r.isReactWarning)
           return !1;
@@ -392,9 +392,9 @@ function gr() {
       return e.key !== void 0;
     }
     function Ze(e, r) {
-      if (typeof e.ref == "string" && N.current && r && N.current.stateNode !== r) {
-        var t = E(N.current.type);
-        q[t] || (p('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', E(N.current.type), e.ref), q[t] = !0);
+      if (typeof e.ref == "string" && L.current && r && L.current.stateNode !== r) {
+        var t = E(L.current.type);
+        q[t] || (p('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', E(L.current.type), e.ref), q[t] = !0);
       }
     }
     function Qe(e, r) {
@@ -453,7 +453,7 @@ function gr() {
         var s, i = {}, a = null, v = null;
         t !== void 0 && (ye(t), a = "" + t), He(r) && (ye(r.key), a = "" + r.key), ze(r) && (v = r.ref, Ze(r, o));
         for (s in r)
-          L.call(r, s) && !qe.hasOwnProperty(s) && (i[s] = r[s]);
+          N.call(r, s) && !qe.hasOwnProperty(s) && (i[s] = r[s]);
         if (e && e.defaultProps) {
           var u = e.defaultProps;
           for (s in u)
@@ -463,7 +463,7 @@ function gr() {
           var c = typeof e == "function" ? e.displayName || e.name || "Unknown" : e;
           a && Qe(i, c), v && er(i, c);
         }
-        return rr(e, a, v, o, n, N.current, i);
+        return rr(e, a, v, o, n, L.current, i);
       }
     }
     var z = k.ReactCurrentOwner, Ee = k.ReactDebugCurrentFrame;
@@ -584,8 +584,8 @@ Check the top-level render call using <` + t + ">.");
         e.ref !== null && (D(e), p("Invalid attribute `ref` supplied to `React.Fragment`."), D(null));
       }
     }
-    var Oe = {};
-    function xe(e, r, t, n, o, s) {
+    var xe = {};
+    function Oe(e, r, t, n, o, s) {
       {
         var i = We(e);
         if (!i) {
@@ -612,28 +612,28 @@ Check the top-level render call using <` + t + ">.");
             else
               Se(h, e);
         }
-        if (L.call(r, "key")) {
+        if (N.call(r, "key")) {
           var j = E(e), m = Object.keys(r).filter(function(dr) {
             return dr !== "key";
           }), Q = m.length > 0 ? "{key: someKey, " + m.join(": ..., ") + ": ...}" : "{key: someKey}";
-          if (!Oe[j + Q]) {
+          if (!xe[j + Q]) {
             var fr = m.length > 0 ? "{" + m.join(": ..., ") + ": ...}" : "{}";
             p(`A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
-  <%s key={someKey} {...props} />`, Q, j, fr, j), Oe[j + Q] = !0;
+  <%s key={someKey} {...props} />`, Q, j, fr, j), xe[j + Q] = !0;
           }
         }
         return e === b ? or(c) : ir(c), c;
       }
     }
     function sr(e, r, t) {
-      return xe(e, r, t, !0);
+      return Oe(e, r, t, !0);
     }
     function lr(e, r, t) {
-      return xe(e, r, t, !1);
+      return Oe(e, r, t, !1);
     }
     var ur = lr, cr = sr;
     M.Fragment = b, M.jsx = ur, M.jsxs = cr;
@@ -668,10 +668,10 @@ const mr = (g) => {
       }
     <\/script>
     <script><\/script>
+    <script src="./../../../dist/index.mjs"><\/script>
     <script type="module">
       import React, { useState, useEffect } from 'react'
       import ReactDOM from 'react-dom/client'
-      import { Playground } from 'https://esm.sh/react-playground-test@#version#'
 
       const App = () => {
         const [sandboxProps, setSandboxProps] = useState(null)
@@ -720,7 +720,7 @@ const mr = (g) => {
     </div>
   </body>
 </html>
-`, hr = "react-playground-test", br = "", Er = "0.0.1", Rr = {
+`, hr = "react-playground-test", br = "", Er = "0.0.3", Rr = {
   ".": {
     import: {
       types: "./dist/@types/Playground/index.d.ts",
@@ -747,7 +747,7 @@ const mr = (g) => {
   "codeSandbox",
   "sandbox",
   "live"
-], Or = "fewismuch", xr = "MIT", Tr = {
+], xr = "fewismuch", Or = "MIT", Tr = {
   dev: "vite",
   build: "vite build && tsc",
   docs: "vite build && tsc",
@@ -819,8 +819,8 @@ const mr = (g) => {
   files: _r,
   repository: wr,
   keywords: Sr,
-  author: Or,
-  license: xr,
+  author: xr,
+  license: Or,
   scripts: Tr,
   dependencies: Pr,
   peerDependencies: jr,
@@ -834,9 +834,9 @@ const mr = (g) => {
     ]
   }
 }, Dr = yr.replace("#version#", kr.version), Ar = mr(Dr) + window.location.hash, Ir = (g) => {
-  const { width: R = "100vw", height: S = "100vh" } = g, b = ee(null), O = ee(!1), [C, x] = pr(!1), y = ee(null), f = (l) => {
+  const { width: R = "100vw", height: S = "100vh" } = g, b = ee(null), x = ee(!1), [C, O] = pr(!1), y = ee(null), f = (l) => {
     l.forEach((d) => {
-      d.isIntersecting && x(!0);
+      d.isIntersecting && O(!0);
     });
   }, _ = (l) => {
     var T, F, U;
@@ -847,7 +847,7 @@ const mr = (g) => {
         ...g,
         onFilesChange: void 0
       }
-    }), O.current = !0) : d === "SANDBOX_ON_FILES_CHANGE" && ((U = g.onFilesChange) == null || U.call(g, w));
+    }), x.current = !0) : d === "SANDBOX_ON_FILES_CHANGE" && ((U = g.onFilesChange) == null || U.call(g, w));
   };
   return re(() => {
     const l = new IntersectionObserver(f, {
@@ -860,10 +860,30 @@ const mr = (g) => {
     window.removeEventListener("message", _);
   }), []), re(() => {
     var l, d;
-    O.current && ((d = (l = b.current) == null ? void 0 : l.contentWindow) == null || d.postMessage({
+    x.current && (console.log(111111111), (d = (l = b.current) == null ? void 0 : l.contentWindow) == null || d.postMessage({
       type: "SANDBOX_RUN",
       data: {
         ...g,
+        files: {
+          "App.tsx": {
+            code: `import { useState } from 'react'
+              function App() {
+                const [count, setCount] = useState(0)
+              
+                return (
+                  <>
+                    <h1>Hello World</h1>
+                    <div className='card'>
+                      <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+                    </div>
+                  </>
+                )
+              }
+              
+              export default App
+              `
+          }
+        },
         onFilesChange: void 0
       }
     }));

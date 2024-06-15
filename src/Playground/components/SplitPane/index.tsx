@@ -1,4 +1,3 @@
-// @ts-ignore
 import { Allotment } from 'allotment'
 import classnames from 'classnames'
 import React, { useRef, useState } from 'react'

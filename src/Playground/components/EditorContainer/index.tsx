@@ -12,7 +12,7 @@ export const EditorContainer: React.FC<IEditorContainer> = (props) => {
   const { showFileSelector, fileSelectorReadOnly, options = {} } = props
   const { files, setFiles, selectedFileName, setSelectedFileName } = useContext(PlaygroundContext)
   const [error, setError] = useState('')
-  const file = files[selectedFileName] || {}
+  const file = files[selectedFileName] || ({} as any)
 
   const handleEditorChange = debounce((value: string) => {
     files[file.name].value = value

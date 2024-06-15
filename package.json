@@ -2,7 +2,7 @@
   "name": "react-playground-test",
   "description": "",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "exports": {
     ".": {
       "import": {

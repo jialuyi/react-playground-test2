@@ -110,20 +110,6 @@ export const getMergedCustomFiles = (files?: ICustomFiles, importMap?: IImportMa
   }
 }
 
-// 从url hash中获取files
-export const getFilesFromUrl = () => {
-  let files: IFiles | undefined
-  try {
-    if (typeof window !== 'undefined') {
-      const hash = window.location.hash
-      if (hash) files = JSON.parse(atou(hash?.split('#')[1]))
-    }
-  } catch (error) {
-    console.error(error)
-  }
-  return files
-}
-
 // 根据文件名后缀匹配文件类型
 export const fileName2Language = (name: string) => {
   const suffix = name.split('.').pop() || ''
