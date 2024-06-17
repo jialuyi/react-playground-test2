@@ -71,12 +71,12 @@ export const PlaygroundProvider = (props: {
         theme,
         filesHash,
         files,
+        addFile,
         selectedFileName,
         setTheme,
         changeTheme,
         setSelectedFileName,
         setFiles,
-        addFile,
         removeFile,
         updateFileName,
       }}

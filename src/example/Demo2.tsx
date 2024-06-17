@@ -15,21 +15,6 @@ export default App
 
   return (
     <>
-      <h1>作为组件使用：</h1>
-      <PlaygroundSandbox
-        showHeader={false}
-        showCompileOutput={false}
-        fileSelectorReadOnly
-        width={700}
-        height={400}
-        border
-        theme='dark'
-        options={{
-          lineNumbers: false,
-        }}
-      />
-      <div style={{ height: '60vh' }}></div>
-      <div>滚动到可视范围内才会加载</div>
       <PlaygroundSandbox
         showHeader={false}
         showCompileOutput={false}

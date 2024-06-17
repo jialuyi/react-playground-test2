@@ -5,9 +5,9 @@ import { Header } from './components/Header'
 import { Output } from './components/Output'
 import { Sandbox } from './components/Sandbox'
 import { SplitPane } from './components/SplitPane'
-import { ENTRY_FILE_NAME, initFiles, MAIN_FILE_NAME } from './files'
+import { ENTRY_FILE_NAME, initFiles } from './files'
 import { PlaygroundContext, PlaygroundProvider } from './PlaygroundContext'
-import { getCustomActiveFile, getMergedCustomFiles, getPlaygroundTheme } from './utils'
+import { getPlaygroundTheme } from './utils'
 
 import type { IPlayground } from './types'
 
@@ -25,7 +25,6 @@ const ReactPlayground = (props: IPlayground) => {
     height = '100vh',
     theme,
     files: propsFiles,
-    importMap,
     showCompileOutput = true,
     showHeader = true,
     showFileSelector = true,
@@ -35,22 +34,8 @@ const ReactPlayground = (props: IPlayground) => {
     onFilesChange,
     autorun = true,
   } = props
-  const { filesHash, changeTheme, files, setFiles, setSelectedFileName } =
-    useContext(PlaygroundContext)
+  const { filesHash, changeTheme, files, setFiles } = useContext(PlaygroundContext)
   const options = Object.assign(defaultCodeSandboxOptions, props.options || {})
-
-  useEffect(() => {
-    if (propsFiles && !propsFiles?.[MAIN_FILE_NAME]) {
-      throw new Error(
-        `Missing required property : '${MAIN_FILE_NAME}' is a mandatory property for 'files'`
-      )
-    } else if (propsFiles) {
-      const newFiles = getMergedCustomFiles(propsFiles, importMap)
-      if (newFiles) setFiles(newFiles)
-      const selectedFileName = getCustomActiveFile(propsFiles)
-      if (selectedFileName) setSelectedFileName(selectedFileName)
-    }
-  }, [propsFiles])
 
   useEffect(() => {
     onFilesChange?.(filesHash)

@@ -32,29 +32,6 @@ export const Sandbox: React.FC<IPlayground> = (props) => {
         type: 'SANDBOX_RUN',
         data: {
           ...props,
-          files: {
-            'App.tsx': {
-              code: `import React from 'react'
-import Child from './Child.tsx'
-
-export default function App() {
-  return <div>
-    父组件
-    <Child msg={666} />
-  </div>
-}
-              `,
-            },
-            'Child.tsx': {
-              code: `import React from 'react'
-
-export default function Child(props) {
-  return <h1>
-    子组件, {props.msg}
-  </h1>
-}`,
-            },
-          },
           onFilesChange: undefined,
         },
       })
@@ -89,30 +66,10 @@ export default function Child(props) {
 
   useEffect(() => {
     if (loaded.current) {
-      console.log(111111111)
       iframeRef.current?.contentWindow?.postMessage({
         type: 'SANDBOX_RUN',
         data: {
           ...props,
-          files: {
-            'App.tsx': {
-              code: `import { useState } from 'react'
-              function App() {
-                const [count, setCount] = useState(0)
-              
-                return (
-                  <>
-                    <div className='card'>
-                      <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                    </div>
-                  </>
-                )
-              }
-              
-              export default App
-              `,
-            },
-          },
           onFilesChange: undefined,
         },
       })

@@ -20,6 +20,7 @@ const babelTransform = (filename: string, code: string, files: IFiles) => {
   return result
 }
 
+// 替换import路径
 const customResolver = (files: IFiles) => {
   return {
     visitor: {
